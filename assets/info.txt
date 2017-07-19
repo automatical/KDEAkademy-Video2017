@@ -1,0 +1,1 @@
+A 5 second background.ts file should be placed in this directory
