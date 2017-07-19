@@ -1,9 +1,9 @@
 #!/bin/bash -ix
 
-export PATH=$PATH:~/Development/voctomix/voctocore/
-export PATH=$PATH:~/Development/voctomix/voctogui/
-export PATH=$PATH:~/Development/voctomix/example-scripts/gstreamer/
-export PATH=$PATH:~/Development/voctomix/example-scripts/ffmpeg/
+export PATH=$PATH:`pwd`/../voctomix/voctocore/
+export PATH=$PATH:`pwd`/../voctomix/voctogui/
+export PATH=$PATH:`pwd`/../voctomix/example-scripts/gstreamer/
+export PATH=$PATH:`pwd`/../voctomix/example-scripts/ffmpeg/
 
 # sencible params for production (recording talks) 
 

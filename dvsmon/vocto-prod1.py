@@ -8,9 +8,14 @@ def main(COMMANDS,conf):
     print(conf)
     COMMANDS.append( Command('voctocore -vv'))
     COMMANDS.append( Command('voctogui -vv'))
-    COMMANDS.append( Command('ssh pi@raspicam1 sh ingestvideo.sh'))
-    COMMANDS.append( Command('sh ingest-picam-1.sh'))
-    COMMANDS.append( Command('record-mixed-ffmpeg-segmented-timestamps.sh'))
+    COMMANDS.append( Command('ssh pi@raspicam1 sh video.sh'))
+    COMMANDS.append( Command('ssh pi@raspicam1 sh audio.sh'))
+    COMMANDS.append( Command('cd `pwd`/../pipeline-scripts/raspicam1 && ingest.sh'))
+    COMMANDS.append( Command('ssh pi@raspicam2 sh video.sh'))
+    COMMANDS.append( Command('cd `pwd`/../pipeline-scripts/raspicam2 && ingest.sh'))
+    COMMANDS.append( Command('cd `pwd`/../pipeline-scripts/framegrabber && framegrabber.sh'))
+    COMMANDS.append( Command('cd `pwd`/../pipeline-scripts/background && background.sh'))
+    COMMANDS.append( Command('cd `pwd`/../pipeline-scripts/comfort && comfort.sh'))
 
     return
 
