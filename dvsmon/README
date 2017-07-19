@@ -1,0 +1,22 @@
+dvsmon
+By Carl Karsten
+
+Manages DVSwitch components: GUI server, sources and sinks.
+
+Attempts to find a reasonable place to store dv files by looking at dirs in ~/Videos, /media, for a dir that is writable and has at least 1gig of free space.
+
+Finds the test-123.dv files.
+
+Other than that, it just runs commands and displays their output.  
+See the dvswitch docs for descriptions of the dvswitch commands.
+
+To test the app (using ping instead of dvswitch):
+./dvs-mon.py 
+
+To run in production:
+./prod.sh
+
+docs:
+./dvs-mon.py --help
+
+
