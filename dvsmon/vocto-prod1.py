@@ -10,12 +10,13 @@ def main(COMMANDS,conf):
     COMMANDS.append( Command('voctogui -vv'))
     COMMANDS.append( Command('ssh pi@raspicam1 sh video.sh'))
     COMMANDS.append( Command('ssh pi@raspicam1 sh audio.sh'))
-    COMMANDS.append( Command('cd `pwd`/../pipeline-scripts/raspicam1 && ingest.sh'))
+    COMMANDS.append( Command('sh ../pipeline-scripts/raspicam1/ingest.sh'))
     COMMANDS.append( Command('ssh pi@raspicam2 sh video.sh'))
-    COMMANDS.append( Command('cd `pwd`/../pipeline-scripts/raspicam2 && ingest.sh'))
-    COMMANDS.append( Command('cd `pwd`/../pipeline-scripts/framegrabber && framegrabber.sh'))
-    COMMANDS.append( Command('cd `pwd`/../pipeline-scripts/background && background.sh'))
-    COMMANDS.append( Command('cd `pwd`/../pipeline-scripts/comfort && comfort.sh'))
+    COMMANDS.append( Command('sh ../pipeline-scripts/raspicam2/ingest.sh'))
+    COMMANDS.append( Command('sh ../pipeline-scripts/framegrabber/framegrabber.sh'))
+    COMMANDS.append( Command('sh ../pipeline-scripts/background/background.sh'))
+    COMMANDS.append( Command('sh ../pipeline-scripts/filesink/sink.sh'))
+    COMMANDS.append( Command('sh ../pipeline-scripts/comfort/comfort.sh'))
 
     return
 
